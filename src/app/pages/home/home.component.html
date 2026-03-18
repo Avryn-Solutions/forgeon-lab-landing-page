@@ -1,6 +1,254 @@
-<app-hero />
-<app-servicos />
-<app-beneficios />
-<app-portfolio />
-<app-contato />
-<app-footer />
+<div class="page-wrap">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#" (click)="$event.preventDefault(); scrollTo('inicio')">
+        <img src="assets/icons/forgeon-logo.png" alt="Logo Forgeon" />
+        <span>Forgeon</span>
+      </a>
+
+      <nav class="nav" [class.open]="menuOpen">
+        <button
+          class="nav-link"
+          *ngFor="let item of navItems"
+          type="button"
+          (click)="scrollTo(item.target)"
+        >
+          {{ item.label }}
+        </button>
+        <button class="btn btn-primary mobile-only" type="button" (click)="openWhatsApp()">
+          Solicitar orcamento
+        </button>
+      </nav>
+
+      <div class="top-actions">
+        <button class="btn btn-ghost desktop-only" type="button" (click)="scrollTo('projetos')">
+          Ver projetos
+        </button>
+        <button class="btn btn-primary desktop-only" type="button" (click)="openWhatsApp()">
+          Solicitar orcamento
+        </button>
+        <button class="menu-btn" type="button" (click)="toggleMenu()" aria-label="Abrir menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Impressao 3D premium para marcas e criadores</span>
+          <h1>Transformamos ideias em pecas reais com precisao industrial.</h1>
+          <p>
+            A Forgeon combina design, tecnologia e execucao agil para entregar pecas personalizadas
+            com acabamento profissional.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" (click)="openWhatsApp()">
+              Solicitar orcamento
+            </button>
+            <button class="btn btn-ghost" type="button" (click)="scrollTo('projetos')">
+              Ver projetos
+            </button>
+          </div>
+          <div class="hero-metrics">
+            <article>
+              <strong>+1.200</strong>
+              <span>Pecas entregues em 2025</span>
+            </article>
+            <article>
+              <strong>97%</strong>
+              <span>Aprovacao no primeiro envio</span>
+            </article>
+            <article>
+              <strong>48h</strong>
+              <span>Lead time medio para prototipo</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-card">
+            <img src="assets/images/portfolio-3.png" alt="Peca impressa em 3D" />
+            <div class="visual-overlay">
+              <span class="status">Producao inteligente</span>
+              <h3>Qualidade constante em cada camada</h3>
+              <p>Monitoramento tecnico e controle de acabamento para cada projeto.</p>
+            </div>
+          </div>
+          <div class="floating floating-a"></div>
+          <div class="floating floating-b"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre">
+      <div class="container two-col">
+        <div class="section-head">
+          <span class="eyebrow">Sobre a Forgeon</span>
+          <h2>Tecnologia e criatividade para dar forma ao que voce imagina.</h2>
+          <p>
+            Desenvolvemos solucoes em impressao 3D para prototipos, decoracao, brindes, pecas
+            personalizadas e projetos sob demanda. Atuamos com foco em performance, clareza de
+            processo e resultado profissional.
+          </p>
+          <ul class="bullet-list">
+            <li>Consultoria tecnica para material e acabamento ideais</li>
+            <li>Fluxo transparente com validacao antes da producao</li>
+            <li>Padrao premium para projetos criativos e industriais</li>
+          </ul>
+        </div>
+        <article class="about-card">
+          <img src="assets/images/portfolio-4.png" alt="Projeto personalizado Forgeon" />
+          <div>
+            <strong>Forgeon Lab</strong>
+            <p>Infraestrutura moderna para impressao 3D de alta confianca.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="beneficios">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="eyebrow">Beneficios</span>
+          <h2>Uma experiencia pensada para velocidade, precisao e personalizacao.</h2>
+        </div>
+        <div class="card-grid benefits-grid">
+          <article class="info-card" *ngFor="let item of benefits">
+            <div class="icon-wrap">
+              <img [src]="item.icon" [alt]="item.title" />
+            </div>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicos">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="eyebrow">Servicos</span>
+          <h2>Solucoes completas em impressao 3D para cada tipo de necessidade.</h2>
+        </div>
+        <div class="card-grid services-grid">
+          <article class="info-card service-card" *ngFor="let item of services">
+            <div class="icon-wrap">
+              <img [src]="item.icon" [alt]="item.title" />
+            </div>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="eyebrow">Portfolio</span>
+          <h2>Projetos que mostram a versatilidade da Forgeon.</h2>
+        </div>
+        <div class="gallery-grid">
+          <article class="gallery-card" *ngFor="let item of gallery">
+            <img [src]="item.image" [alt]="item.title" />
+            <div class="gallery-info">
+              <span>{{ item.category }}</span>
+              <h3>{{ item.title }}</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-section">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="eyebrow">Como funciona</span>
+          <h2>Processo simples, orientado por qualidade.</h2>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card" *ngFor="let step of steps; let idx = index">
+            <span class="step-number">{{ idx + 1 }}</span>
+            <h3>{{ step.title }}</h3>
+            <p>{{ step.description }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="eyebrow">Prova social</span>
+          <h2>Depoimentos de quem confiou no processo Forgeon.</h2>
+        </div>
+        <div class="card-grid testimonials-grid">
+          <article class="testimonial-card" *ngFor="let item of testimonials">
+            <p>"{{ item.quote }}"</p>
+            <div>
+              <strong>{{ item.name }}</strong>
+              <span>{{ item.role }}</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta" id="contato">
+      <div class="container cta-card">
+        <div>
+          <span class="eyebrow">Pronto para seu projeto?</span>
+          <h2>Solicite um orcamento e receba orientacao tecnica em poucos minutos.</h2>
+          <p>
+            Conte sua ideia e receba uma proposta personalizada com prazo, material e acabamento
+            ideais para seu objetivo.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <button class="btn btn-primary" type="button" (click)="openWhatsApp()">
+            Falar no WhatsApp
+          </button>
+          <button class="btn btn-ghost" type="button" (click)="scrollTo('inicio')">
+            Voltar ao topo
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#" (click)="$event.preventDefault(); scrollTo('inicio')">
+          <img src="assets/icons/forgeon-logo.png" alt="Logo Forgeon" />
+          <span>Forgeon</span>
+        </a>
+        <p>
+          Marca especializada em impressao 3D sob demanda, com foco em qualidade profissional e
+          atendimento consultivo.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegacao</h4>
+        <button *ngFor="let item of navItems" type="button" (click)="scrollTo(item.target)">
+          {{ item.label }}
+        </button>
+      </div>
+
+      <div class="footer-links">
+        <h4>Contato</h4>
+        <a href="mailto:contato@forgeon.com.br">contato&#64;forgeon.com.br</a>
+        <a href="tel:+5511959062010">(11) 95906-2010</a>
+        <a href="https://www.instagram.com/forgeonlab" target="_blank" rel="noreferrer">
+          Instagram
+        </a>
+      </div>
+    </div>
+    <div class="container footer-copy">(c) {{ currentYear }} Forgeon. Todos os direitos reservados.</div>
+  </footer>
+</div>
