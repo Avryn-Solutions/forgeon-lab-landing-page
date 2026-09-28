@@ -1,0 +1,38 @@
+<div class="feature-page">
+  <div class="feature-shell">
+    <header class="feature-intro">
+      <span class="eyebrow">Catálogo / ForgeonLab</span>
+      <h1>Feitos para sair<br>do comum.</h1>
+      <p>Peças autorais, presentes com história e produtos que você pode tornar seus. Explore o que está saindo do Lab.</p>
+    </header>
+    <div class="shop-toolbar" aria-label="Filtros de produtos">
+      <div class="category-list" aria-label="Categorias">
+        <button type="button" [class.active]="category() === 'all'" [attr.aria-pressed]="category() === 'all'" (click)="category.set('all')">Todos</button>
+        @for (item of categories; track item.slug) {
+          <button type="button" [class.active]="category() === item.slug" [attr.aria-pressed]="category() === item.slug" (click)="category.set(item.slug)">{{ item.name }}</button>
+        }
+      </div>
+      <div class="shop-controls">
+        <label class="search-box"><span class="sr-only">Buscar produtos</span><input type="search" placeholder="Buscar no Lab" [value]="search()" (input)="search.set($any($event.target).value)" /></label>
+        <label class="sort-box"><span class="sr-only">Ordenar produtos</span><select [value]="sort()" (change)="sort.set($any($event.target).value)"><option value="featured">Destaques</option><option value="name">Nome: A–Z</option><option value="price">Menor preço</option></select></label>
+      </div>
+    </div>
+    <p class="results-count" aria-live="polite">{{ filtered().length }} {{ filtered().length === 1 ? 'criação' : 'criações' }}</p>
+    @if (filtered().length) {
+      <div class="product-grid">
+        @for (product of filtered(); track product.id) {
+          <a class="product-card" [routerLink]="['/produto', product.slug]" [attr.aria-label]="'Ver ' + product.name">
+            <div class="product-image"><img [src]="product.images[0]" [alt]="product.name" loading="lazy" />@if (product.badge) { <span class="product-badge">{{ product.badge }}</span> }</div>
+            <div class="product-meta"><span>{{ categoryName(product.category) }}</span><span aria-hidden="true">↗</span></div>
+            <h2>{{ product.name }}</h2>
+            <p>{{ product.shortDescription }}</p>
+            <strong>@if (product.priceType === 'QUOTE') { Sob orçamento } @else if (product.priceType === 'STARTING_AT') { A partir de {{ product.price | currency:'BRL' }} } @else { {{ product.price | currency:'BRL' }} }</strong>
+          </a>
+        }
+      </div>
+    } @else {
+      <div class="empty-results"><h2>Nada por aqui ainda.</h2><p>Tente outra busca ou conte sua ideia para a gente.</p><a class="button-secondary" routerLink="/orcamento">Pedir orçamento</a></div>
+    }
+    <aside class="shop-tail"><span class="eyebrow">Peça única</span><h2>Não encontrou sua ideia?</h2><p>O Lab também cria do zero, com base na sua foto, desenho, arquivo ou referência.</p><a class="button-primary" routerLink="/orcamento">Criar algo personalizado <span aria-hidden="true">↗</span></a></aside>
+  </div>
+</div>

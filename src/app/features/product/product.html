@@ -1,0 +1,29 @@
+<div class="feature-page">
+  <div class="feature-shell">
+    @if (product; as item) {
+      <nav class="breadcrumbs" aria-label="Navegação estrutural"><a routerLink="/loja">Loja</a><span aria-hidden="true">/</span><span>{{ item.name }}</span></nav>
+      <div class="product-layout">
+        <div class="gallery">
+          <div class="main-image"><img [src]="item.images[imageIndex()]" [alt]="item.name + ', imagem conceitual ' + (imageIndex() + 1)" /><span class="concept-badge">Imagem conceitual</span></div>
+          @if (item.images.length > 1) { <div class="thumbnails" aria-label="Imagens do produto">@for (image of item.images; track image; let index = $index) { <button type="button" [class.selected]="imageIndex() === index" [attr.aria-label]="'Ver imagem ' + (index + 1)" [attr.aria-pressed]="imageIndex() === index" (click)="imageIndex.set(index)"><img [src]="image" [alt]="''" loading="lazy" /></button> }</div> }
+        </div>
+        <div class="product-info">
+          <span class="eyebrow">{{ categoryName(item.category) }} / ForgeonLab</span>
+          <h1>{{ item.name }}</h1>
+          <p class="lead">{{ item.shortDescription }}</p>
+          <p class="price">@if (item.priceType === 'QUOTE') { Sob orçamento } @else if (item.priceType === 'STARTING_AT') { <small>A partir de</small> {{ item.price | currency:'BRL' }} } @else { {{ item.price | currency:'BRL' }} }</p>
+          <p class="description">{{ item.description }}</p>
+          @for (option of item.options; track option.name) {
+            <fieldset class="option-group"><legend>{{ option.name }} @if (option.required) { <span aria-hidden="true">*</span> }</legend><div class="option-values">@for (value of option.values; track value) { <button type="button" [class.selected]="selectedOptions()[option.name] === value" [attr.aria-pressed]="selectedOptions()[option.name] === value" (click)="selectOption(option.name, value)">{{ value }}</button> }</div></fieldset>
+          }
+          @if (item.customizable) { <label class="form-field notes"><span class="field-label">Observações sobre sua peça</span><textarea placeholder="Ex.: Quero o nome Toti na base." [value]="notes()" (input)="notes.set($any($event.target).value)"></textarea></label> }
+          <div class="quantity-row"><span>Quantidade</span><div class="stepper"><button type="button" aria-label="Diminuir quantidade" [disabled]="quantity() <= 1" (click)="quantity.update(n => n > 1 ? n - 1 : 1)">−</button><span aria-live="polite">{{ quantity() }}</span><button type="button" aria-label="Aumentar quantidade" (click)="quantity.update(n => n+1)">+</button></div></div>
+          @if (attempted() && requiredMissing(item)) { <p class="validation" role="alert">Selecione as opções obrigatórias para continuar.</p> }
+          <div class="actions"><button type="button" class="button-primary" (click)="add(item)">{{ item.priceType === 'QUOTE' ? 'Adicionar ao pedido' : 'Adicionar ao carrinho' }} <span aria-hidden="true">↗</span></button><a class="button-secondary" [href]="buyUrl(item)" target="_blank" rel="noopener noreferrer" (click)="directOrder($event, item)">Pedir pelo WhatsApp</a></div>
+          @if (added()) { <p class="added" role="status">Adicionado ao carrinho. <a routerLink="/carrinho">Ver carrinho →</a></p> }
+          <div class="product-details"><p><strong>Feito no Lab</strong><span>Produção cuidadosa, sob demanda.</span></p><p><strong>Prazo estimado</strong><span>{{ item.leadTime || 'Confirmado no atendimento' }}</span></p><p><strong>Personalização</strong><span>Detalhes finais combinados no WhatsApp.</span></p></div>
+        </div>
+      </div>
+    } @else { <div class="not-found"><h1>Essa peça não está no Lab.</h1><p>Talvez tenha mudado de lugar. Explore o catálogo ou conte sua ideia para a gente.</p><a class="button-primary" routerLink="/loja">Voltar à loja</a></div> }
+  </div>
+</div>

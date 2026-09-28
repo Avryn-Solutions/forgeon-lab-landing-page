@@ -1,0 +1,45 @@
+<div class="feature-page portfolio-page">
+  <section class="feature-shell feature-intro portfolio-intro">
+    <span class="eyebrow">Explorações do Lab</span>
+    <h1>Ideias que pedem para existir.</h1>
+    <p>O portfólio da ForgeonLab está começando. Por enquanto, mostramos as áreas que queremos explorar e estudos visuais do que podemos criar juntos.</p>
+  </section>
+
+  <section class="feature-shell portfolio-content" aria-labelledby="portfolio-heading">
+    <div class="portfolio-note">
+      <span class="note-mark" aria-hidden="true">✳</span>
+      <p><strong>Imagens conceituais.</strong> As imagens desta página ilustram possibilidades de produtos. Ainda não recebemos fotos de trabalhos concluídos para apresentar como projetos realizados.</p>
+    </div>
+    <div class="section-topline">
+      <div>
+        <span class="eyebrow">Possibilidades</span>
+        <h2 id="portfolio-heading">O que pode sair do laboratório</h2>
+      </div>
+      <p>Cada projeto começa com uma história, um desenho ou uma referência. O resultado é pensado para a pessoa que vai recebê-lo.</p>
+    </div>
+    <div class="portfolio-grid">
+      @for (direction of directions; track direction.number) {
+        <article class="portfolio-card">
+          <div class="portfolio-image">
+            <img [src]="direction.image" [alt]="direction.alt" loading="lazy" />
+            <span>Estudo visual</span>
+          </div>
+          <div class="portfolio-card-copy">
+            <span>{{ direction.number }} / Exploração</span>
+            <h3>{{ direction.title }}</h3>
+            <p>{{ direction.text }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="feature-shell portfolio-invite">
+    <div>
+      <span class="eyebrow">Próximo projeto</span>
+      <h2>O próximo projeto pode começar com você.</h2>
+      <p>Tem uma foto, arquivo, referência ou ideia? Conte para o Lab. Vamos conversar sobre o formato, as possibilidades e o orçamento.</p>
+    </div>
+    <a class="button-primary" routerLink="/orcamento">Pedir orçamento <span aria-hidden="true">↗</span></a>
+  </section>
+</div>

@@ -1,6 +1,0 @@
-<!-- cube-3d.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <polygon points="16,2 30,10 16,18 2,10" fill="#b48cff"></polygon>
-  <polygon points="16,18 30,10 30,22 16,30" fill="#9f7bff"></polygon>
-  <polygon points="16,18 2,10 2,22 16,30" fill="#7b4dff"></polygon>
-</svg>

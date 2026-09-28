@@ -1,0 +1,29 @@
+@use '../feature' as *;
+
+.about-intro { padding-bottom: clamp(4rem, 9vw, 8rem); }
+.about-intro .button-primary { margin-top: 2rem; }
+.about-manifesto { border-top: 1px solid #ddd6e5; padding-block: clamp(3.5rem, 8vw, 7rem); }
+.manifesto-layout { display: grid; gap: 1.5rem; }
+.manifesto-layout h2 { max-width: 720px; margin: 0; font-size: clamp(2rem, 4.5vw, 4.2rem); line-height: 1.08; letter-spacing: -.052em; }
+.manifesto-layout p { max-width: 430px; margin: 0 0 1.2rem; color: #655d70; line-height: 1.8; font-size: .94rem; }
+.about-principles { padding-block: clamp(2.5rem, 6vw, 5rem); background: #29183a; color: #fff; }
+.principles-grid { display: grid; gap: 2rem; }
+.principles-grid > div { padding-top: 1rem; border-top: 1px solid #76558d; }
+.principles-grid span { color: #bd95d9; font-size: .72rem; font-weight: 700; letter-spacing: .12em; }
+.principles-grid h3 { margin: 2rem 0 .5rem; font-size: clamp(1.35rem, 2vw, 1.8rem); letter-spacing: -.04em; }
+.principles-grid p { max-width: 290px; margin: 0; color: #d4c4de; font-size: .87rem; line-height: 1.65; }
+.characters-section { padding-block: clamp(4rem, 9vw, 8rem); }
+.characters-heading { display: grid; gap: 1rem; align-items: end; margin-bottom: 2rem; }
+.characters-heading h2 { max-width: 620px; margin: 0; font-size: clamp(2rem, 4vw, 3.7rem); line-height: 1.06; letter-spacing: -.05em; }
+.characters-heading p { max-width: 350px; margin: 0; color: #6b6375; line-height: 1.7; font-size: .9rem; }
+.characters-grid { display: grid; gap: 1rem; }
+.character-card { display: grid; grid-template-columns: minmax(110px, 38%) 1fr; align-items: center; min-height: 180px; background: #f2edf5; }
+.character-image { align-self: stretch; overflow: hidden; background: #e8dcef; }
+.character-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.character-copy { padding: 1rem; }
+.character-copy span { color: #8157aa; font-size: .66rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.character-copy h3 { margin: .35rem 0 .45rem; font-size: 1.45rem; letter-spacing: -.04em; }
+.character-copy p { margin: 0; color: #695e73; font-size: .78rem; line-height: 1.55; }
+.about-last { margin-bottom: clamp(3rem, 7vw, 6rem); padding: clamp(2rem, 6vw, 5rem); background: #f1eaf6; }
+.about-last h2 { max-width: 620px; margin: 0 0 1.8rem; font-size: clamp(2rem, 4vw, 3.8rem); line-height: 1.08; letter-spacing: -.05em; }
+@media (min-width: 700px) { .manifesto-layout { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 3rem; }.principles-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }.characters-heading { grid-template-columns: 1fr auto; }.characters-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }.character-card { display: block; }.character-image { aspect-ratio: 1 / 1; }.character-copy { padding: 1.3rem; min-height: 145px; } }
