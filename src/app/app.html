@@ -10,17 +10,17 @@
       <a routerLink="/portfolio" routerLinkActive="active" (click)="closeMenu()">Portfólio</a>
       <a routerLink="/sobre" routerLinkActive="active" (click)="closeMenu()">Sobre</a>
       <a class="nav-cart" routerLink="/carrinho" routerLinkActive="active" (click)="closeMenu()" [attr.aria-label]="'Carrinho com ' + cart.count() + ' itens'">Carrinho <span class="cart-count">{{ cart.count() }}</span></a>
-      <a class="button button-small nav-cta" routerLink="/orcamento" (click)="closeMenu()">Criar algo <span aria-hidden="true">↗</span></a>
+      <a class="button button-small nav-cta" routerLink="/orcamento" (click)="closeMenu()">Conte sua ideia <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
 </header>
 <main id="conteudo"><router-outlet /></main>
 <footer class="site-footer">
   <div class="wrap footer-grid">
-    <div><a class="brand footer-brand" routerLink="/"><img src="/favicon.ico" alt="" width="34" height="34" /><span>ForgeonLab</span></a><p>Design e impressão 3D para ideias que merecem virar objeto.</p></div>
-    <div><strong>Explore</strong><a routerLink="/loja">Loja</a><a routerLink="/portfolio">Portfólio</a><a routerLink="/sobre">Sobre a ForgeonLab</a></div>
-    <div><strong>Crie com a gente</strong><a routerLink="/orcamento">Pedir orçamento</a><a href="https://wa.me/5511994476058" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="mailto:pessoal.forgeon@gmail.com">E-mail</a></div>
-    <div><strong>Acompanhe</strong><a href="https://www.instagram.com/forgeonlab/" target="_blank" rel="noopener noreferrer">&#64;forgeonlab ↗</a><small>Produtos sob demanda. Preços e prazos são confirmados no atendimento.</small></div>
+    <div><a class="brand footer-brand" routerLink="/"><img src="/favicon.ico" alt="" width="34" height="34" /><span>ForgeonLab</span></a><p>Criamos com cuidado peças que guardam histórias, lembranças e ideias suas.</p></div>
+    <div><strong>Encontre sua peça</strong><a routerLink="/loja">Loja</a><a routerLink="/portfolio">Portfólio</a><a routerLink="/sobre">Sobre a ForgeonLab</a></div>
+    <div><strong>Vamos conversar</strong><a routerLink="/orcamento">Pedir orçamento</a><a href="https://wa.me/5511994476058" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="mailto:pessoal.forgeon@gmail.com">E-mail</a></div>
+    <div><strong>Por perto</strong><a href="https://www.instagram.com/forgeonlab/" target="_blank" rel="noopener noreferrer">&#64;forgeonlab ↗</a><small>Entregamos para todo o Brasil. Frete e prazo são combinados antes de confirmar o pedido.</small></div>
   </div>
-  <div class="wrap footer-bottom"><span>© 2026 ForgeonLab</span><span>Ideias, design e um pouco de magia.</span></div>
+  <div class="wrap footer-bottom"><span>© 2026 ForgeonLab</span><span>Feito com carinho, de ideia em ideia.</span></div>
 </footer>

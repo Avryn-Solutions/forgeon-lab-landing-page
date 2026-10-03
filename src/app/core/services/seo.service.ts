@@ -17,12 +17,12 @@ export class SeoService {
   private update(): void {
     const path = this.router.url.split('?')[0];
     const pages: Record<string, [string, string]> = {
-      '/': ['ForgeonLab | Ideias ganham forma', 'Produtos personalizados, presentes e criações com identidade própria. Envie sua ideia à ForgeonLab e peça pelo WhatsApp.'],
-      '/loja': ['Loja | ForgeonLab', 'Explore pets personalizados, chaveiros, miniaturas, decoração e presentes criativos da ForgeonLab.'],
-      '/carrinho': ['Carrinho | ForgeonLab', 'Confira as peças escolhidas e finalize seu pedido pelo WhatsApp da ForgeonLab.'],
-      '/orcamento': ['Pedir orçamento | ForgeonLab', 'Envie sua ideia, foto ou arquivo e converse com a ForgeonLab sobre um produto personalizado.'],
-      '/portfolio': ['Portfólio | ForgeonLab', 'Conheça as possibilidades criativas da ForgeonLab e acompanhe a evolução do nosso portfólio.'],
-      '/sobre': ['Sobre a ForgeonLab | ForgeonLab', 'Conheça a ForgeonLab, um laboratório criativo onde ideias, personagens e lembranças ganham forma.'],
+      '/': ['ForgeonLab | Peças feitas com cuidado', 'Miniaturas, presentes e peças personalizadas feitas com cuidado. Conte sua ideia à ForgeonLab. Enviamos para todo o Brasil.'],
+      '/loja': ['Loja | ForgeonLab', 'Conheça miniaturas, chaveiros, presentes e peças personalizadas da ForgeonLab. Envio para todo o Brasil.'],
+      '/carrinho': ['Carrinho | ForgeonLab', 'Revise suas peças e converse com a ForgeonLab pelo WhatsApp sobre personalização, frete e prazo.'],
+      '/orcamento': ['Pedir orçamento | ForgeonLab', 'Envie uma foto, desenho ou arquivo e converse com a ForgeonLab sobre sua peça personalizada. Atendemos todo o Brasil.'],
+      '/portfolio': ['Portfólio | ForgeonLab', 'Conheça os estudos visuais e as possibilidades de criação da ForgeonLab. Enviamos para todo o Brasil.'],
+      '/sobre': ['Sobre a ForgeonLab | ForgeonLab', 'Conheça a ForgeonLab e nosso jeito cuidadoso de criar peças personalizadas com design e impressão 3D.'],
     };
     const product = path.startsWith('/produto/') ? this.catalog.getProductBySlug(path.slice(9)) : undefined;
     const [title, description] = product

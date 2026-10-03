@@ -16,14 +16,14 @@
           @for (option of item.options; track option.name) {
             <fieldset class="option-group"><legend>{{ option.name }} @if (option.required) { <span aria-hidden="true">*</span> }</legend><div class="option-values">@for (value of option.values; track value) { <button type="button" [class.selected]="selectedOptions()[option.name] === value" [attr.aria-pressed]="selectedOptions()[option.name] === value" (click)="selectOption(option.name, value)">{{ value }}</button> }</div></fieldset>
           }
-          @if (item.customizable) { <label class="form-field notes"><span class="field-label">Observações sobre sua peça</span><textarea placeholder="Ex.: Quero o nome Toti na base." [value]="notes()" (input)="notes.set($any($event.target).value)"></textarea></label> }
+          @if (item.customizable) { <label class="form-field notes"><span class="field-label">O que você gostaria de personalizar?</span><textarea placeholder="Ex.: Quero o nome Toti na base." [value]="notes()" (input)="notes.set($any($event.target).value)"></textarea></label> }
           <div class="quantity-row"><span>Quantidade</span><div class="stepper"><button type="button" aria-label="Diminuir quantidade" [disabled]="quantity() <= 1" (click)="quantity.update(n => n > 1 ? n - 1 : 1)">−</button><span aria-live="polite">{{ quantity() }}</span><button type="button" aria-label="Aumentar quantidade" (click)="quantity.update(n => n+1)">+</button></div></div>
-          @if (attempted() && requiredMissing(item)) { <p class="validation" role="alert">Selecione as opções obrigatórias para continuar.</p> }
+          @if (attempted() && requiredMissing(item)) { <p class="validation" role="alert">Escolha as opções marcadas com * para continuar.</p> }
           <div class="actions"><button type="button" class="button-primary" (click)="add(item)">{{ item.priceType === 'QUOTE' ? 'Adicionar ao pedido' : 'Adicionar ao carrinho' }} <span aria-hidden="true">↗</span></button><a class="button-secondary" [href]="buyUrl(item)" target="_blank" rel="noopener noreferrer" (click)="directOrder($event, item)">Pedir pelo WhatsApp</a></div>
-          @if (added()) { <p class="added" role="status">Adicionado ao carrinho. <a routerLink="/carrinho">Ver carrinho →</a></p> }
-          <div class="product-details"><p><strong>Feito pela ForgeonLab</strong><span>Produção cuidadosa, sob demanda.</span></p><p><strong>Prazo estimado</strong><span>{{ item.leadTime || 'Confirmado no atendimento' }}</span></p><p><strong>Personalização</strong><span>Detalhes finais combinados no WhatsApp.</span></p></div>
+          @if (added()) { <p class="added" role="status">Sua peça foi adicionada ao carrinho. <a routerLink="/carrinho">Ver carrinho →</a></p> }
+          <div class="product-details"><p><strong>Feito pela ForgeonLab</strong><span>Criamos cada pedido com atenção aos detalhes.</span></p><p><strong>Prazo de produção</strong><span>{{ item.leadTime || 'Confirmado no atendimento' }}</span></p><p><strong>Personalização</strong><span>Combinamos os detalhes com você pelo WhatsApp.</span></p><p><strong>Envio</strong><span>Para todo o Brasil; frete e prazo confirmados no atendimento.</span></p></div>
         </div>
       </div>
-    } @else { <div class="not-found"><h1>Não encontramos essa peça.</h1><p>Talvez tenha mudado de lugar. Explore o catálogo ou conte sua ideia para a gente.</p><a class="button-primary" routerLink="/loja">Voltar à loja</a></div> }
+    } @else { <div class="not-found"><h1>Não encontramos essa peça.</h1><p>Ela pode ter mudado de lugar. Veja outras peças ou conte o que você procura.</p><a class="button-primary" routerLink="/loja">Voltar à loja</a></div> }
   </div>
 </div>

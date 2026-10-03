@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 import { CatalogService } from './core/services/catalog.service';
 
 export const routes: Routes = [
-  { path: '', title: 'ForgeonLab | Ideias ganham forma', loadComponent: () => import('./features/home/home').then(m => m.Home) },
+  { path: '', title: 'ForgeonLab | Peças feitas com cuidado', loadComponent: () => import('./features/home/home').then(m => m.Home) },
   { path: 'loja', title: 'Loja | ForgeonLab', loadComponent: () => import('./features/shop/shop').then(m => m.Shop) },
   { path: 'produto/:slug', title: route => `${inject(CatalogService).getProductBySlug(route.paramMap.get('slug') ?? '')?.name ?? 'Produto'} | ForgeonLab`, loadComponent: () => import('./features/product/product').then(m => m.Product) },
   { path: 'carrinho', title: 'Carrinho | ForgeonLab', loadComponent: () => import('./features/cart/cart').then(m => m.Cart) },

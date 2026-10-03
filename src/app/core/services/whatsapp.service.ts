@@ -9,7 +9,7 @@ const url = (message: string) => `https://wa.me/${PHONE}?text=${encodeURICompone
 @Injectable({ providedIn: 'root' })
 export class WhatsAppService {
   cartUrl(items: CartItem[]): string {
-    const lines = ['Olá! 👋', 'Gostaria de fazer um pedido na ForgeonLab.'];
+    const lines = ['Olá! 👋', 'Separei algumas peças e gostaria de conversar sobre meu pedido na ForgeonLab:'];
     for (const item of items) {
       lines.push('', `${item.product.name} × ${item.quantity}`);
       for (const [option, value] of Object.entries(item.selectedOptions)) {
@@ -35,7 +35,7 @@ export class WhatsAppService {
   quoteUrl(form: QuoteRequest): string {
     const lines = [
       'Olá! 👋',
-      'Gostaria de solicitar um orçamento na ForgeonLab.',
+      'Tenho uma ideia e gostaria de conversar com a ForgeonLab sobre um orçamento.',
       '',
       `Nome: ${form.name}`,
       `Tipo: ${form.projectType}`,
