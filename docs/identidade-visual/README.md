@@ -23,6 +23,10 @@ No código, use var(--forgeon-gradient). Os tons estão definidos em src/styles.
 
 - O nome da marca é **ForgeonLab**, sempre junto. Evite “Lab” como apelido isolado.
 - Prefira tipografia, espaço e detalhes roxos a fundos com muitos efeitos.
-- Guaru, Pingy e Disquete entram como personagens de apoio; produtos e pedidos ficam em primeiro plano.
+- Guaru, Pingy e Disquete são o destaque da abertura: chegam em sequência pelo portal roxo e flutuam brevemente. Nas demais seções, apoiam a marca sem ocupar o lugar dos produtos e pedidos.
 - Imagens conceituais devem ser identificadas como estudo ou conceito. Troque por fotos reais assim que houver peças fotografadas e autorizadas.
 - Ao apresentar um pedido, descreva materiais, dimensões, acabamento, prazo e preço confirmados pela equipe; não prometa essas características antes da conversa.
+
+## Movimento na abertura
+
+A chegada dura menos de cinco segundos e termina com os personagens em repouso. O botão “Rever a chegada” permite repetir a sequência. A preferência de movimento reduzido desativa as animações. No celular, os personagens aparecem logo abaixo do título, antes da apresentação e dos botões de pedido. As ilustrações originais são preservadas.
