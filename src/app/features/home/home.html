@@ -26,16 +26,16 @@
     <div class="featured-grid">
       @for (product of featured; track product.id) {
         <a class="featured-item" [routerLink]="['/produto', product.slug]">
-          <div class="featured-image"><img [src]="product.images[0]" [alt]="product.name + ' — imagem conceitual'" loading="lazy" /><span>Conceito</span></div>
+          <div class="featured-image"><img [src]="product.images[0]" [alt]="product.imageDescriptions?.[0] || product.name + ' — imagem conceitual'" [style.object-fit]="product.imageType === 'photo' ? 'contain' : 'cover'" loading="lazy" /><span>{{ product.imageType === 'photo' ? 'Peça produzida' : 'Conceito' }}</span></div>
           <div class="featured-copy"><div><h3>{{ product.name }}</h3><p>{{ product.shortDescription }}</p></div><span class="price">@if (product.priceType === 'QUOTE') {Sob orçamento} @else if (product.priceType === 'STARTING_AT') {A partir de {{ product.price | currency:'BRL' }} } @else { {{ product.price | currency:'BRL' }} }</span></div>
         </a>
       }
     </div>
-    <p class="concept-note">Estas imagens são estudos visuais, não fotos de peças produzidas. Materiais, valores e prazos são confirmados antes de começar.</p>
+    <p class="concept-note">A miniatura de pet aparece em uma foto real. Os itens marcados como conceito são estudos visuais. Materiais, valores e prazos são combinados com você antes de começar.</p>
   </div>
 </section>
 
-<section class="custom-section section"><div class="wrap custom-layout"><div class="custom-visual"><img src="/products/chaveiros.webp" alt="Conceito de chaveiros personalizados" loading="lazy" /><span>01 / IDEIA → OBJETO</span></div><div class="custom-copy"><p class="eyebrow">PERSONALIZADOS</p><h2>Conte a ideia do seu jeito.</h2><p>Uma foto do seu pet, uma lembrança entre amigos ou um projeto para a sua marca: pode enviar fotos, desenhos, referências ou um arquivo 3D. Conversamos com calma sobre tamanho, acabamento e o que podemos criar.</p><ul><li>Foto ou referência</li><li>Desenho ou conceito</li><li>STL, 3MF e outros arquivos</li></ul><a class="button" routerLink="/orcamento">Pedir orçamento <span aria-hidden="true">↗</span></a></div></div></section>
+<section class="custom-section section"><div class="wrap custom-layout"><div class="custom-visual"><img src="/products/pets/boomer.webp" alt="Miniatura Boomer com base personalizada e identificação ForgeonLab" loading="lazy" /><span>BOOMER / PEÇA PRODUZIDA</span></div><div class="custom-copy"><p class="eyebrow">PERSONALIZADOS</p><h2>Conte a ideia do seu jeito.</h2><p>Uma foto do seu pet, uma lembrança entre amigos ou um projeto para a sua marca: pode enviar fotos, desenhos, referências ou um arquivo 3D. Conversamos com calma sobre tamanho, acabamento e o que podemos criar.</p><ul><li>Foto ou referência</li><li>Desenho ou conceito</li><li>STL, 3MF e outros arquivos</li></ul><a class="button" routerLink="/orcamento">Pedir orçamento <span aria-hidden="true">↗</span></a></div></div></section>
 
 <section class="section process-section wrap"><div class="section-heading"><div><p class="eyebrow">COMO FUNCIONA</p><h2>Da primeira conversa<br>até a sua casa.</h2></div></div><div class="steps"><div><span>01</span><h3>Você nos conta</h3><p>Uma mensagem, foto ou arquivo já é um bom começo.</p></div><div><span>02</span><h3>Pensamos juntos</h3><p>Conversamos sobre formato, acabamento, valor e prazo.</p></div><div><span>03</span><h3>Criamos com cuidado</h3><p>Preparamos a peça com atenção ao que torna sua ideia especial.</p></div><div><span>04</span><h3>Enviamos para você</h3><p>Atendemos todo o Brasil. Frete e prazo são combinados antes da confirmação.</p></div></div></section>
 

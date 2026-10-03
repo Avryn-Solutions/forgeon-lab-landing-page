@@ -22,7 +22,7 @@
       <div class="product-grid">
         @for (product of filtered(); track product.id) {
           <a class="product-card" [routerLink]="['/produto', product.slug]" [attr.aria-label]="'Ver ' + product.name">
-            <div class="product-image"><img [src]="product.images[0]" [alt]="product.name" loading="lazy" />@if (product.badge) { <span class="product-badge">{{ product.badge }}</span> }</div>
+            <div class="product-image"><img [src]="product.images[0]" [alt]="product.imageDescriptions?.[0] || product.name" [style.object-fit]="product.imageType === 'photo' ? 'contain' : 'cover'" loading="lazy" />@if (product.badge) { <span class="product-badge">{{ product.badge }}</span> }</div>
             <div class="product-meta"><span>{{ categoryName(product.category) }}</span><span aria-hidden="true">↗</span></div>
             <h2>{{ product.name }}</h2>
             <p>{{ product.shortDescription }}</p>

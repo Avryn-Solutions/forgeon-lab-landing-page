@@ -1,6 +1,6 @@
 # ForgeonLab
 
-Site oficial da ForgeonLab em Angular 21, TypeScript, componentes standalone e Signals. Catálogo e portfólio demonstrativos, carrinho local e pedidos por WhatsApp. Leia [PLANEJAMENTO.md](./PLANEJAMENTO.md) para o escopo e as decisões de conteúdo e [Identidade visual](./docs/identidade-visual/README.md) para a paleta da marca.
+Site oficial da ForgeonLab em Angular 21, TypeScript, componentes standalone e Signals. Catálogo com fotos reais de pets e conceitos nas demais categorias, portfólio das peças Vida Loka e Boomer, carrinho local e pedidos por WhatsApp. Leia [PLANEJAMENTO.md](./PLANEJAMENTO.md) para o escopo e as decisões de conteúdo e [Identidade visual](./docs/identidade-visual/README.md) para a paleta da marca.
 
 ## Rodar localmente
 
@@ -15,9 +15,9 @@ Acesse `http://localhost:4200`. Para gerar a versão estática, use `pnpm build`
 
 ## Conteúdo antes de publicar
 
-- Substituir as imagens conceituais em `public/products/` por fotos autorizadas de produtos reais.
+- Substituir as imagens conceituais restantes em `public/products/` por fotos autorizadas de produtos reais.
 - Confirmar nomes, preços, prazos e opções em `src/app/data/products.ts`.
-- Acrescentar projetos realizados ao portfólio quando houver fotos e histórias verificadas.
+- Acrescentar novos projetos ao portfólio com fotos reais e descrições confirmadas pela marca.
 - Definir `SITE_URL` com o domínio final para gerar `sitemap.xml` e a referência no `robots.txt` durante o build.
 
 ## Vercel

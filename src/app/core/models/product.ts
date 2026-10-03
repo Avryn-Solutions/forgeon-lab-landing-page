@@ -22,6 +22,9 @@ export interface Product {
   priceType: PriceType;
   category: string;
   images: string[];
+  imageType?: 'photo' | 'concept';
+  imageDescriptions?: string[];
+  video?: { src: string; poster: string; description: string };
   featured: boolean;
   customizable: boolean;
   active: boolean;

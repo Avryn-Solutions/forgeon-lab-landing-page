@@ -1,13 +1,22 @@
 import { Product } from '../core/models/product';
 
-// Catálogo demonstrativo. Nomes, preços e imagens devem ser confirmados antes da publicação comercial.
+// Pets: fotos reais fornecidas pela marca. Demais imagens: conceitos. Confirmar preços e opções no atendimento.
 export const products: Product[] = [
   {
     id: 'pet-personalizado', name: 'Pet em miniatura', slug: 'pet-personalizado',
     shortDescription: 'Uma lembrança do seu pet para ter sempre por perto.',
     description: 'Envie fotos do seu pet e conte como ele é. Conversamos sobre pose, tamanho e detalhes para criar uma miniatura que lembre o seu companheiro.',
-    price: 90, priceType: 'STARTING_AT', category: 'pets', images: ['/products/pet.webp'],
-    featured: true, customizable: true, active: true, badge: 'Conceito', leadTime: 'Prazo definido após avaliação',
+    price: 90, priceType: 'STARTING_AT', category: 'pets', images: ['/products/pets/vida-loka.webp', '/products/pets/boomer.webp'],
+    imageType: 'photo',
+    imageDescriptions: [
+      'Vida Loka: miniatura de cachorro branco com colete azul, gravata vermelha e base preta com o nome.',
+      'Boomer: miniatura de cachorro sobre uma base preta com o nome, ao lado da identificação ForgeonLab.',
+    ],
+    video: {
+      src: '/products/pets/boomer.mp4', poster: '/products/pets/boomer-video.webp',
+      description: 'Boomer em movimento: o vídeo mostra a miniatura de frente e de lado, com a base personalizada e a identificação ForgeonLab.',
+    },
+    featured: true, customizable: true, active: true, badge: 'Peça produzida', leadTime: 'Prazo definido após avaliação',
     options: [{ name: 'Tamanho', values: ['10 cm', '15 cm', '20 cm'], required: true }, { name: 'Base', values: ['Sem base', 'Preta', 'Colorida'] }],
   },
   {

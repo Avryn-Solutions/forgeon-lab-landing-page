@@ -9,9 +9,18 @@ import { RouterLink } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Portfolio {
-  readonly directions = [
-    { number: '01', title: 'Pets e memórias', text: 'Uma foto do seu pet pode inspirar uma miniatura para guardar por perto.', image: '/products/pet.webp', alt: 'Visual conceitual de miniatura de pet' },
-    { number: '02', title: 'Pequenos presentes', text: 'Chaveiros e pequenas lembranças para agradecer, celebrar ou surpreender.', image: '/products/chaveiros.webp', alt: 'Visual conceitual de chaveiros personalizados' },
-    { number: '03', title: 'Objetos com identidade', text: 'Peças para a casa, eventos ou marcas, pensadas a partir da sua ideia.', image: '/products/decor.webp', alt: 'Visual conceitual de objeto decorativo' },
+  readonly projects = [
+    {
+      number: '01', title: 'Vida Loka',
+      text: 'Colete azul, gravata vermelha e uma base com o nome. Uma miniatura cheia de detalhes para guardar por perto.',
+      image: '/products/pets/vida-loka.webp',
+      alt: 'Miniatura Vida Loka: cachorro branco com colete azul, gravata vermelha e base preta personalizada.',
+    },
+    {
+      number: '02', title: 'Boomer',
+      text: 'A expressão, a textura do pelo e o nome na base fazem parte desta peça. Um exemplo real de pet em miniatura da ForgeonLab.',
+      image: '/products/pets/boomer.webp',
+      alt: 'Miniatura Boomer em base preta personalizada, fotografada com a identificação ForgeonLab.',
+    },
   ];
 }

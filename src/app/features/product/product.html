@@ -4,8 +4,15 @@
       <nav class="breadcrumbs" aria-label="Navegação estrutural"><a routerLink="/loja">Loja</a><span aria-hidden="true">/</span><span>{{ item.name }}</span></nav>
       <div class="product-layout">
         <div class="gallery">
-          <div class="main-image"><img [src]="item.images[imageIndex()]" [alt]="item.name + ', imagem conceitual ' + (imageIndex() + 1)" /><span class="concept-badge">Imagem conceitual</span></div>
-          @if (item.images.length > 1) { <div class="thumbnails" aria-label="Imagens do produto">@for (image of item.images; track image; let index = $index) { <button type="button" [class.selected]="imageIndex() === index" [attr.aria-label]="'Ver imagem ' + (index + 1)" [attr.aria-pressed]="imageIndex() === index" (click)="imageIndex.set(index)"><img [src]="image" [alt]="''" loading="lazy" /></button> }</div> }
+          <div class="main-image" [class.photo-gallery]="item.imageType === 'photo'"><img [src]="item.images[imageIndex()]" [alt]="item.imageDescriptions?.[imageIndex()] || item.name + ', imagem conceitual ' + (imageIndex() + 1)" />@if (item.imageType !== 'photo') { <span class="concept-badge">Imagem conceitual</span> }</div>
+          @if (item.imageDescriptions?.[imageIndex()]) { <p class="gallery-caption">{{ item.imageDescriptions?.[imageIndex()] }}</p> }
+          @if (item.images.length > 1) { <div class="thumbnails" aria-label="Imagens do produto">@for (image of item.images; track image; let index = $index) { <button type="button" [class.selected]="imageIndex() === index" [attr.aria-label]="'Ver imagem ' + (index + 1) + ': ' + (item.imageDescriptions?.[index] || item.name)" [attr.aria-pressed]="imageIndex() === index" (click)="imageIndex.set(index)"><img [src]="image" [alt]="''" loading="lazy" /></button> }</div> }
+          @if (item.video; as video) {
+            <figure class="product-video">
+              <video controls playsinline preload="none" [poster]="video.poster" aria-describedby="product-video-description"><source [src]="video.src" type="video/mp4" />Seu navegador não reproduz este vídeo. <a [href]="video.src">Abrir vídeo da peça</a>.</video>
+              <figcaption id="product-video-description">{{ video.description }}</figcaption>
+            </figure>
+          }
         </div>
         <div class="product-info">
           <span class="eyebrow">{{ categoryName(item.category) }} / ForgeonLab</span>

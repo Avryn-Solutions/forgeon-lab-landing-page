@@ -9,3 +9,9 @@
 .actions { display: grid; gap: .7rem; }.validation { color: #a22a50; font-size: .84rem; }.added { color: #436e41; font-size: .86rem; }.added a { color: inherit; font-weight: 700; }.product-details { margin-top: 2.3rem; border-top: 1px solid #e4deea; }.product-details p { display: flex; justify-content: space-between; gap: 1rem; margin: 0; padding: 1rem 0; border-bottom: 1px solid #e4deea; font-size: .8rem; }.product-details span { color: #706677; text-align: right; }
 .not-found { padding: 5rem 0 8rem; }.not-found h1 { font-size: clamp(2.5rem, 5vw, 5rem); }.not-found p { color: #6c6478; }.not-found .button-primary { margin-top: 1rem; }
 @media (min-width: 850px) { .product-layout { grid-template-columns: minmax(0, 1.15fr) minmax(350px, .85fr); gap: clamp(3rem, 6vw, 7rem); }.actions { grid-template-columns: 1fr 1fr; } }
+
+.main-image.photo-gallery { aspect-ratio: 3 / 4; }
+.gallery-caption, .product-video figcaption { font-size: .82rem; color: #61576c; line-height: 1.6; }
+.product-video { margin: 2rem 0 0; }
+.product-video video { display: block; width: min(100%, 330px); height: auto; background: #211b30; }
+.product-video figcaption { max-width: 440px; margin-top: .7rem; }

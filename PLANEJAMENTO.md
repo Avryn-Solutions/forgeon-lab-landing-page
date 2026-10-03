@@ -13,7 +13,7 @@ Início → Loja → Produto → opções e observações → Carrinho → Whats
 Início, Loja, Produto, Carrinho, Orçamento, Portfólio e Sobre. Catálogo local separado dos componentes por um serviço, pronto para futura troca de origem dos dados.
 
 ## Conteúdo e limites da versão 1
-Produtos iniciais são exemplos de oferta e valores de referência, a confirmar pela ForgeonLab. Imagens geradas são conceituais e não representam trabalhos concluídos. Portfólio deve indicar claramente a ausência de fotografias reais até sua inclusão. Sem pagamento, conta, backend ou upload automático.
+Produtos iniciais são exemplos de oferta e valores de referência, a confirmar pela ForgeonLab. Imagens geradas são conceituais e não representam trabalhos concluídos. Desde 3 de outubro de 2026, pets e portfólio usam fotos reais das miniaturas Vida Loka e Boomer e um vídeo do Boomer fornecidos pela marca. As demais categorias mantêm a identificação de conceito. Sem pagamento, conta, backend ou upload automático.
 
 ## Antes da publicação
 Substituir exemplos por fotos e descrições de trabalhos reais, validar preços e prazos, definir domínio canônico para sitemap e Open Graph, testar pedido e orçamento no WhatsApp e conectar o projeto à Vercel.
