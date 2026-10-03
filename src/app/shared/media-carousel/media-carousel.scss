@@ -1,0 +1,15 @@
+:host { display: block; min-width: 0; }
+.media-stage { position: relative; aspect-ratio: 1; background: #ece7ef; overflow: hidden; }
+.media-stage.photo { aspect-ratio: 3 / 4; background: #211b30; }
+.media-stage img, .media-stage video { display: block; width: 100%; height: 100%; object-fit: contain; }
+.concept-badge { position: absolute; left: 1rem; bottom: 1rem; background: white; color: var(--forgeon-purple-dark); padding: .55rem .7rem; font-size: .76rem; }
+.navigation { display: flex; align-items: center; justify-content: space-between; margin-top: .7rem; }
+.navigation button { width: 44px; height: 44px; border: 1px solid #d9d1e2; background: transparent; color: var(--forgeon-purple-dark); font-size: 1.2rem; cursor: pointer; }
+.navigation span { color: #61576c; font-size: .8rem; }
+.thumbnails { display: flex; gap: .6rem; margin-top: .6rem; }
+.thumbnails button { position: relative; width: 72px; height: 84px; padding: 0; border: 2px solid transparent; background: #ece7ef; cursor: pointer; }
+.thumbnails button.selected { border-color: var(--forgeon-purple-base); }
+.thumbnails img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.thumbnails span { position: absolute; inset: 0; display: grid; place-items: center; color: white; background: #211b304d; }
+button:focus-visible { outline: 3px solid var(--forgeon-purple-base); outline-offset: 3px; }
+.caption { margin: 1rem 0 0; color: #61576c; font-size: .82rem; line-height: 1.6; }

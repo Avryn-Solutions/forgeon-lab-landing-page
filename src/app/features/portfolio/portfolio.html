@@ -10,18 +10,16 @@
       <div><span class="eyebrow">Pets em miniatura</span><h2 id="portfolio-heading">Dois companheiros,<br>cada um do seu jeito.</h2></div>
       <p>O nome na base, a expressão e os detalhes de cada cachorrinho ajudam a tornar a lembrança pessoal.</p>
     </div>
-    <div class="portfolio-grid">
-      @for (project of projects; track project.number) {
-        <article class="portfolio-card">
-          <div class="portfolio-image"><img [src]="project.image" [alt]="project.alt" width="960" height="1280" loading="lazy" /><span>Peça produzida</span></div>
-          <div class="portfolio-card-copy"><span>{{ project.number }} / Pet personalizado</span><h3>{{ project.title }}</h3><p>{{ project.text }}</p></div>
-        </article>
-      }
+    <div class="portfolio-gallery">
+      @if (pet; as product) { <app-media-carousel [product]="product" /> }
+      <div class="portfolio-details">
+        <span class="eyebrow">Para ver de pertinho</span>
+        <h3>Uma lembrança com o jeitinho de cada um.</h3>
+        <p><strong>Boomer</strong> abre a galeria em movimento, para você conhecer a expressão, a textura do pelo e a base com seu nome.</p>
+        <p><strong>Vida Loka</strong> aparece com colete azul e gravata vermelha. Nas fotos, você pode olhar com calma os detalhes das duas peças.</p>
+        <a class="button-secondary" routerLink="/produto/pet-personalizado">Conhecer os pets personalizados <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
-    <section class="portfolio-video" aria-labelledby="video-heading">
-      <div><span class="eyebrow">Para ver de pertinho</span><h2 id="video-heading">Boomer em movimento.</h2><p id="boomer-video-description">O vídeo mostra a miniatura de frente e de lado, com a base personalizada e a identificação ForgeonLab.</p><a class="button-secondary" routerLink="/produto/pet-personalizado">Conhecer os pets personalizados <span aria-hidden="true">↗</span></a></div>
-      <video controls playsinline preload="none" poster="/products/pets/boomer-video.webp" aria-describedby="boomer-video-description"><source src="/products/pets/boomer.mp4" type="video/mp4" />Seu navegador não reproduz este vídeo. <a href="/products/pets/boomer.mp4">Abrir vídeo do Boomer</a>.</video>
-    </section>
   </section>
 
   <section class="feature-shell portfolio-invite">

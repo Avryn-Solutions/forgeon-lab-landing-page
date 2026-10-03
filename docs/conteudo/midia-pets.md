@@ -11,3 +11,5 @@ As fotos foram orientadas e comprimidas para a web, preservando o conteúdo da p
 Uso: página inicial, catálogo, galeria do pet personalizado e portfólio. Os pets são identificados como peças produzidas. Os demais produtos com imagens conceituais continuam identificados como conceitos.
 
 Os nomes foram lidos nas bases das peças. Não foram acrescentados dados de clientes, medidas ou histórias que não tenham sido informados.
+
+A página do produto e o portfólio usam um carrossel compartilhado: vídeo do Boomer primeiro, foto de Vida Loka e foto do Boomer em seguida. Setas e miniaturas permitem escolher a mídia; não há avanço automático. Ao trocar o vídeo por uma foto, o player é removido para interromper a reprodução.

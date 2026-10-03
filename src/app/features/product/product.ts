@@ -1,3 +1,4 @@
+import { MediaCarousel } from '../../shared/media-carousel/media-carousel';
 import { CurrencyPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
@@ -8,7 +9,7 @@ import { Product as ProductModel } from '../../core/models/product';
 
 @Component({
   selector: 'app-product',
-  imports: [RouterLink, CurrencyPipe],
+  imports: [RouterLink, CurrencyPipe, MediaCarousel],
   templateUrl: './product.html',
   styleUrl: './product.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -19,7 +20,6 @@ export class Product {
   private readonly cart = inject(CartService);
   private readonly whatsApp = inject(WhatsAppService);
   readonly product = this.catalog.getProductBySlug(this.route.snapshot.paramMap.get('slug') ?? '');
-  readonly imageIndex = signal(0);
   readonly quantity = signal(1);
   readonly selectedOptions = signal<Record<string, string>>({});
   readonly notes = signal('');

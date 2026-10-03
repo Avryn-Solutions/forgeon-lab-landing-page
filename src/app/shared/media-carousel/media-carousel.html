@@ -1,0 +1,33 @@
+<section class="carousel" aria-label="Fotos e vídeo da peça" aria-roledescription="carrossel">
+  <div class="media-stage" [class.photo]="product().imageType === 'photo'">
+    @for (slide of slides(); track slide.src; let index = $index) {
+      @if (selected() === index) {
+        @if (slide.type === 'video') {
+          <video controls playsinline preload="none" [poster]="slide.thumbnail" [attr.aria-label]="slide.description">
+            <source [src]="slide.src" type="video/mp4" />
+            Seu navegador não reproduz este vídeo. <a [href]="slide.src">Abrir vídeo da peça</a>.
+          </video>
+        } @else {
+          <img [src]="slide.src" [alt]="slide.description" />
+        }
+      }
+    }
+    @if (product().imageType !== 'photo') { <span class="concept-badge">Imagem conceitual</span> }
+  </div>
+  @if (slides().length > 1) {
+    <div class="navigation">
+      <button type="button" aria-label="Mídia anterior" (click)="move(-1)">←</button>
+      <span aria-live="polite" aria-atomic="true">{{ selected() + 1 }} / {{ slides().length }} · {{ slides()[selected()].type === 'video' ? 'Vídeo' : 'Foto' }}</span>
+      <button type="button" aria-label="Próxima mídia" (click)="move(1)">→</button>
+    </div>
+    <div class="thumbnails" aria-label="Escolher foto ou vídeo">
+      @for (slide of slides(); track slide.src; let index = $index) {
+        <button type="button" [class.selected]="selected() === index" [attr.aria-pressed]="selected() === index" [attr.aria-label]="'Ver ' + (slide.type === 'video' ? 'vídeo' : 'foto') + ': ' + slide.description" (click)="selected.set(index)">
+          <img [src]="slide.thumbnail" alt="" loading="lazy" />
+          @if (slide.type === 'video') { <span aria-hidden="true">▶</span> }
+        </button>
+      }
+    </div>
+  }
+  <p class="caption">{{ slides()[selected()].description }}</p>
+</section>
