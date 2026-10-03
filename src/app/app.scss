@@ -1,20 +1,19 @@
 :host { display: block; min-height: 100vh; }
 .site-header { height: 76px; position: relative; z-index: 20; background: #fff; border-bottom: 1px solid #ece8f0; }
 .header-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
-.brand { display: inline-flex; align-items: center; gap: .65rem; color: #251033; font-size: 1.4rem; font-weight: 850; letter-spacing: -.06em; white-space: nowrap; }
+.brand { display: inline-flex; align-items: center; gap: .65rem; color: var(--forgeon-ink); font-size: 1.4rem; font-weight: 850; letter-spacing: -.06em; white-space: nowrap; }
 .brand img { object-fit: contain; }
-.brand-light { font-weight: 450; color: #7733a9; }
 .main-nav { display: flex; align-items: center; gap: clamp(.9rem, 1.6vw, 1.8rem); }
 .main-nav > a:not(.button) { color: #504357; font-size: .88rem; font-weight: 650; transition: color .2s; }
-.main-nav > a:not(.button):hover, .main-nav > a.active { color: #7733a9; }
-.cart-count { display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 50%; background: #efe5f6; color: #62248d; margin-left: 3px; font-size: .75rem; }
+.main-nav > a:not(.button):hover, .main-nav > a.active { color: var(--forgeon-purple-dark); }
+.cart-count { display: inline-grid; place-items: center; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 50%; background: var(--forgeon-lilac); color: var(--forgeon-purple-dark); margin-left: 3px; font-size: .75rem; }
 .menu-button { display: none; }
-.site-footer { background: #180e20; color: #f4edf8; padding-top: 4.5rem; }
+.site-footer { border-top: 5px solid var(--forgeon-purple-base); background: #1d1532; color: #f4edf8; padding-top: 4.5rem; }
 .footer-grid { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 2rem; padding-bottom: 4rem; }
 .footer-grid > div { display: flex; flex-direction: column; align-items: start; gap: .9rem; }
 .footer-grid p, .footer-grid small { color: #baaac5; max-width: 16rem; line-height: 1.6; }
 .footer-grid a:not(.brand) { color: #ded4e5; font-size: .93rem; }
-.footer-grid a:hover { color: #bd81e5; }
+.footer-grid a:hover { color: var(--forgeon-purple-soft); }
 .footer-grid strong { color: #fff; font-size: .9rem; margin-bottom: .35rem; }
 .footer-brand { color: white; margin-bottom: .1rem; }
 .footer-bottom { border-top: 1px solid #403047; display: flex; justify-content: space-between; gap: 1rem; padding: 1.25rem 0 1.5rem; color: #a997b5; font-size: .8rem; }

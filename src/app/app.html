@@ -1,7 +1,7 @@
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 <header class="site-header">
   <div class="header-inner wrap">
-    <a class="brand" routerLink="/" (click)="closeMenu()" aria-label="ForgeonLab, início"><img src="/favicon.ico" alt="" width="32" height="32" /><span>Forgeon<span class="brand-light">Lab</span></span></a>
+    <a class="brand" routerLink="/" (click)="closeMenu()" aria-label="ForgeonLab, início"><img src="/favicon.ico" alt="" width="32" height="32" /><span>ForgeonLab</span></a>
     <button class="menu-button" type="button" (click)="menuOpen.set(!menuOpen())" [attr.aria-expanded]="menuOpen()" aria-controls="main-nav" aria-label="Abrir ou fechar menu"><span></span><span></span><span></span></button>
     <nav id="main-nav" class="main-nav" [class.open]="menuOpen()" aria-label="Navegação principal">
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="closeMenu()">Início</a>
@@ -17,8 +17,8 @@
 <main id="conteudo"><router-outlet /></main>
 <footer class="site-footer">
   <div class="wrap footer-grid">
-    <div><a class="brand footer-brand" routerLink="/"><img src="/favicon.ico" alt="" width="34" height="34" /><span>Forgeon<span class="brand-light">Lab</span></span></a><p>Um laboratório onde ideias ganham forma.</p></div>
-    <div><strong>Explore</strong><a routerLink="/loja">Loja</a><a routerLink="/portfolio">Portfólio</a><a routerLink="/sobre">Sobre o Lab</a></div>
+    <div><a class="brand footer-brand" routerLink="/"><img src="/favicon.ico" alt="" width="34" height="34" /><span>ForgeonLab</span></a><p>Design e impressão 3D para ideias que merecem virar objeto.</p></div>
+    <div><strong>Explore</strong><a routerLink="/loja">Loja</a><a routerLink="/portfolio">Portfólio</a><a routerLink="/sobre">Sobre a ForgeonLab</a></div>
     <div><strong>Crie com a gente</strong><a routerLink="/orcamento">Pedir orçamento</a><a href="https://wa.me/5511994476058" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="mailto:pessoal.forgeon@gmail.com">E-mail</a></div>
     <div><strong>Acompanhe</strong><a href="https://www.instagram.com/forgeonlab/" target="_blank" rel="noopener noreferrer">&#64;forgeonlab ↗</a><small>Produtos sob demanda. Preços e prazos são confirmados no atendimento.</small></div>
   </div>

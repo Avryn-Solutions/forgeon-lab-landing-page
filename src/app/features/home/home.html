@@ -1,21 +1,20 @@
 <section class="hero">
   <div class="wrap hero-content">
-    <p class="eyebrow light">FORGEONLAB / LABORATÓRIO CRIATIVO</p>
-    <h1>Ideias ganham<br><em>forma</em> por aqui.</h1>
-    <p>Produtos personalizados, presentes e criações que começam na imaginação e saem do nosso laboratório.</p>
-    <div class="hero-actions"><a class="button button-light" routerLink="/loja">Explorar o Lab <span aria-hidden="true">↗</span></a><a class="text-link" routerLink="/orcamento">Criar algo <span aria-hidden="true">↗</span></a></div>
-    <span class="hero-caption">Imagem conceitual de produto</span>
+    <p class="eyebrow light">DESIGN + IMPRESSÃO 3D</p>
+    <h1>Da sua ideia<br>para o <em>mundo real.</em></h1>
+    <p>Miniaturas, presentes e peças personalizadas criadas a partir de fotos, desenhos ou arquivos.</p>
+    <div class="hero-actions"><a class="button button-light" routerLink="/loja">Ver produtos <span aria-hidden="true">↗</span></a><a class="text-link" routerLink="/orcamento">Criar algo <span aria-hidden="true">↗</span></a></div>
   </div>
 </section>
 
 <section class="intro section wrap">
-  <div class="section-top"><span class="eyebrow">O QUE SAI DO LAB</span><span class="small-note">Objetos com história, feitos para existir.</span></div>
+  <div class="section-top"><span class="eyebrow">O QUE CRIAMOS</span><span class="small-note">Design, fabricação digital e personalização.</span></div>
   <div class="intro-layout"><h2>Para guardar.<br>Para presentear.<br><em>Para ser seu.</em></h2><div><p>Uma foto, um desenho, uma lembrança ou uma ideia difícil de explicar. A gente encontra um jeito de transformar tudo isso em algo que você pode segurar.</p><a class="underlined" routerLink="/orcamento">Conte sua ideia <span aria-hidden="true">↗</span></a></div></div>
   <div class="category-line"><span>Pets personalizados</span><span>Miniaturas</span><span>Chaveiros</span><span>Decoração</span><span>Projetos especiais</span></div>
 </section>
 
 <section class="section featured-section">
-  <div class="wrap"><div class="section-heading"><div><p class="eyebrow">POSSIBILIDADES DO LAB</p><h2>Peças que contam histórias.</h2></div><a class="underlined" routerLink="/loja">Ver o catálogo <span aria-hidden="true">↗</span></a></div>
+  <div class="wrap"><div class="section-heading"><div><p class="eyebrow">IDEIAS PARA COMEÇAR</p><h2>Peças que contam histórias.</h2></div><a class="underlined" routerLink="/loja">Ver o catálogo <span aria-hidden="true">↗</span></a></div>
     <div class="featured-grid">
       @for (product of featured; track product.id) {
         <a class="featured-item" [routerLink]="['/produto', product.slug]">
@@ -24,14 +23,14 @@
         </a>
       }
     </div>
-    <p class="concept-note">Imagens e produtos demonstrativos. Valores e detalhes são confirmados em conversa com o Lab.</p>
+    <p class="concept-note">Imagens conceituais. Valores, materiais e prazos são confirmados com a ForgeonLab antes da produção.</p>
   </div>
 </section>
 
-<section class="custom-section section"><div class="wrap custom-layout"><div class="custom-visual"><img src="/products/chaveiros.webp" alt="Conceito de chaveiros personalizados" loading="lazy" /><span>01 / IDEIA → OBJETO</span></div><div class="custom-copy"><p class="eyebrow">PERSONALIZADOS</p><h2>Aquela ideia que só você poderia ter.</h2><p>Seu pet, uma piada interna, o presente perfeito ou o projeto da sua marca. Envie fotos, desenhos, referências ou um arquivo pronto. O Lab cuida do próximo passo com você.</p><ul><li>Foto ou referência</li><li>Desenho ou conceito</li><li>STL, 3MF e outros arquivos</li></ul><a class="button" routerLink="/orcamento">Pedir orçamento <span aria-hidden="true">↗</span></a></div></div></section>
+<section class="custom-section section"><div class="wrap custom-layout"><div class="custom-visual"><img src="/products/chaveiros.webp" alt="Conceito de chaveiros personalizados" loading="lazy" /><span>01 / IDEIA → OBJETO</span></div><div class="custom-copy"><p class="eyebrow">PERSONALIZADOS</p><h2>Aquela ideia que só você poderia ter.</h2><p>Seu pet, uma piada interna, o presente perfeito ou o projeto da sua marca. Envie fotos, desenhos, referências ou um arquivo pronto. A ForgeonLab conversa com você sobre formato, acabamento e produção.</p><ul><li>Foto ou referência</li><li>Desenho ou conceito</li><li>STL, 3MF e outros arquivos</li></ul><a class="button" routerLink="/orcamento">Pedir orçamento <span aria-hidden="true">↗</span></a></div></div></section>
 
-<section class="section process-section wrap"><div class="section-heading"><div><p class="eyebrow">COMO FUNCIONA</p><h2>Simples de começar.<br>Especial até o fim.</h2></div></div><div class="steps"><div><span>01</span><h3>Você conta a ideia</h3><p>Uma mensagem, foto ou arquivo já basta para começarmos.</p></div><div><span>02</span><h3>O Lab avalia</h3><p>Alinhamos formato, acabamento, valor e prazo.</p></div><div><span>03</span><h3>A gente cria</h3><p>Preparamos e produzimos a peça para ela ganhar vida.</p></div><div><span>04</span><h3>Ela chega até você</h3><p>Sua história agora existe fora da tela.</p></div></div></section>
+<section class="section process-section wrap"><div class="section-heading"><div><p class="eyebrow">COMO FUNCIONA</p><h2>Do primeiro contato<br>à peça pronta.</h2></div></div><div class="steps"><div><span>01</span><h3>Você conta a ideia</h3><p>Uma mensagem, foto ou arquivo já basta para começarmos.</p></div><div><span>02</span><h3>Avaliamos juntos</h3><p>Alinhamos formato, acabamento, valor e prazo.</p></div><div><span>03</span><h3>A gente cria</h3><p>Preparamos e produzimos a peça para ela ganhar vida.</p></div><div><span>04</span><h3>Ela chega até você</h3><p>Combinamos entrega ou envio com você.</p></div></div></section>
 
-<section class="universe-section section"><div class="wrap universe-layout"><div><p class="eyebrow light">UNIVERSO FORGEONLAB</p><h2>Até o Lab tem<br>seus personagens.</h2><p>Guaru imagina, Pingy aproxima e Disquete experimenta. Três jeitos de mostrar a personalidade por trás de cada criação.</p><a class="underlined light-link" routerLink="/sobre">Conheça o universo <span aria-hidden="true">↗</span></a></div><div class="character-row"><div><img src="/characters/guaru.webp" alt="Guaru, sapo mágico da ForgeonLab" loading="lazy" /><strong>Guaru</strong></div><div><img src="/characters/pingy.webp" alt="Pingy, pinguim da ForgeonLab" loading="lazy" /><strong>Pingy</strong></div><div><img src="/characters/disquete.webp" alt="Disquete, robô da ForgeonLab" loading="lazy" /><strong>Disquete</strong></div></div></div></section>
+<section class="universe-section section"><div class="wrap universe-layout"><div><p class="eyebrow light">UNIVERSO FORGEONLAB</p><h2>Três personagens.<br>Uma marca.</h2><p>Guaru imagina, Pingy aproxima e Disquete experimenta. Três jeitos de mostrar a personalidade por trás de cada criação.</p><a class="underlined light-link" routerLink="/sobre">Conheça o universo <span aria-hidden="true">↗</span></a></div><div class="character-row"><div><img src="/characters/guaru.webp" alt="Guaru, sapo mágico da ForgeonLab" loading="lazy" /><strong>Guaru</strong></div><div><img src="/characters/pingy.webp" alt="Pingy, pinguim da ForgeonLab" loading="lazy" /><strong>Pingy</strong></div><div><img src="/characters/disquete.webp" alt="Disquete, robô da ForgeonLab" loading="lazy" /><strong>Disquete</strong></div></div></div></section>
 
-<section class="closing section wrap"><p class="eyebrow">AGORA É SUA VEZ</p><h2>Tem alguma ideia<br>esperando para existir?</h2><div><a class="button" routerLink="/orcamento">Manda para o Lab <span aria-hidden="true">↗</span></a><a class="underlined" routerLink="/portfolio">Ver o portfólio <span aria-hidden="true">↗</span></a></div></section>
+<section class="closing section wrap"><p class="eyebrow">AGORA É SUA VEZ</p><h2>Tem alguma ideia<br>esperando para existir?</h2><div><a class="button" routerLink="/orcamento">Pedir orçamento <span aria-hidden="true">↗</span></a><a class="underlined" routerLink="/portfolio">Ver o portfólio <span aria-hidden="true">↗</span></a></div></section>

@@ -20,9 +20,9 @@ export class SeoService {
       '/': ['ForgeonLab | Ideias ganham forma', 'Produtos personalizados, presentes e criações com identidade própria. Envie sua ideia à ForgeonLab e peça pelo WhatsApp.'],
       '/loja': ['Loja | ForgeonLab', 'Explore pets personalizados, chaveiros, miniaturas, decoração e presentes criativos da ForgeonLab.'],
       '/carrinho': ['Carrinho | ForgeonLab', 'Confira as peças escolhidas e finalize seu pedido pelo WhatsApp da ForgeonLab.'],
-      '/orcamento': ['Pedir orçamento | ForgeonLab', 'Envie sua ideia, foto ou arquivo e converse com o Lab sobre um produto personalizado.'],
+      '/orcamento': ['Pedir orçamento | ForgeonLab', 'Envie sua ideia, foto ou arquivo e converse com a ForgeonLab sobre um produto personalizado.'],
       '/portfolio': ['Portfólio | ForgeonLab', 'Conheça as possibilidades criativas da ForgeonLab e acompanhe a evolução do nosso portfólio.'],
-      '/sobre': ['Sobre o Lab | ForgeonLab', 'Conheça a ForgeonLab, um laboratório criativo onde ideias, personagens e lembranças ganham forma.'],
+      '/sobre': ['Sobre a ForgeonLab | ForgeonLab', 'Conheça a ForgeonLab, um laboratório criativo onde ideias, personagens e lembranças ganham forma.'],
     };
     const product = path.startsWith('/produto/') ? this.catalog.getProductBySlug(path.slice(9)) : undefined;
     const [title, description] = product

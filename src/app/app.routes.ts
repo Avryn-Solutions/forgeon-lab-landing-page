@@ -9,6 +9,6 @@ export const routes: Routes = [
   { path: 'carrinho', title: 'Carrinho | ForgeonLab', loadComponent: () => import('./features/cart/cart').then(m => m.Cart) },
   { path: 'orcamento', title: 'Pedir orçamento | ForgeonLab', loadComponent: () => import('./features/quote/quote').then(m => m.Quote) },
   { path: 'portfolio', title: 'Portfólio | ForgeonLab', loadComponent: () => import('./features/portfolio/portfolio').then(m => m.Portfolio) },
-  { path: 'sobre', title: 'Sobre o Lab | ForgeonLab', loadComponent: () => import('./features/about/about').then(m => m.About) },
+  { path: 'sobre', title: 'Sobre a ForgeonLab | ForgeonLab', loadComponent: () => import('./features/about/about').then(m => m.About) },
   { path: '**', redirectTo: '' },
 ];

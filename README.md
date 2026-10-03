@@ -1,6 +1,6 @@
 # ForgeonLab
 
-Site oficial da ForgeonLab em Angular 21, TypeScript, componentes standalone e Signals. Catálogo e portfólio demonstrativos, carrinho local e pedidos por WhatsApp. Leia [PLANEJAMENTO.md](./PLANEJAMENTO.md) para o escopo e as decisões de conteúdo.
+Site oficial da ForgeonLab em Angular 21, TypeScript, componentes standalone e Signals. Catálogo e portfólio demonstrativos, carrinho local e pedidos por WhatsApp. Leia [PLANEJAMENTO.md](./PLANEJAMENTO.md) para o escopo e as decisões de conteúdo e [Identidade visual](./docs/identidade-visual/README.md) para a paleta da marca.
 
 ## Rodar localmente
 

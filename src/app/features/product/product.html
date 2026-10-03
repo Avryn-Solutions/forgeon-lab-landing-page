@@ -21,9 +21,9 @@
           @if (attempted() && requiredMissing(item)) { <p class="validation" role="alert">Selecione as opções obrigatórias para continuar.</p> }
           <div class="actions"><button type="button" class="button-primary" (click)="add(item)">{{ item.priceType === 'QUOTE' ? 'Adicionar ao pedido' : 'Adicionar ao carrinho' }} <span aria-hidden="true">↗</span></button><a class="button-secondary" [href]="buyUrl(item)" target="_blank" rel="noopener noreferrer" (click)="directOrder($event, item)">Pedir pelo WhatsApp</a></div>
           @if (added()) { <p class="added" role="status">Adicionado ao carrinho. <a routerLink="/carrinho">Ver carrinho →</a></p> }
-          <div class="product-details"><p><strong>Feito no Lab</strong><span>Produção cuidadosa, sob demanda.</span></p><p><strong>Prazo estimado</strong><span>{{ item.leadTime || 'Confirmado no atendimento' }}</span></p><p><strong>Personalização</strong><span>Detalhes finais combinados no WhatsApp.</span></p></div>
+          <div class="product-details"><p><strong>Feito pela ForgeonLab</strong><span>Produção cuidadosa, sob demanda.</span></p><p><strong>Prazo estimado</strong><span>{{ item.leadTime || 'Confirmado no atendimento' }}</span></p><p><strong>Personalização</strong><span>Detalhes finais combinados no WhatsApp.</span></p></div>
         </div>
       </div>
-    } @else { <div class="not-found"><h1>Essa peça não está no Lab.</h1><p>Talvez tenha mudado de lugar. Explore o catálogo ou conte sua ideia para a gente.</p><a class="button-primary" routerLink="/loja">Voltar à loja</a></div> }
+    } @else { <div class="not-found"><h1>Não encontramos essa peça.</h1><p>Talvez tenha mudado de lugar. Explore o catálogo ou conte sua ideia para a gente.</p><a class="button-primary" routerLink="/loja">Voltar à loja</a></div> }
   </div>
 </div>

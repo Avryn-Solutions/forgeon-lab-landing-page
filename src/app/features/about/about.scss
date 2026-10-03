@@ -9,7 +9,7 @@
 .about-principles { padding-block: clamp(2.5rem, 6vw, 5rem); background: #29183a; color: #fff; }
 .principles-grid { display: grid; gap: 2rem; }
 .principles-grid > div { padding-top: 1rem; border-top: 1px solid #76558d; }
-.principles-grid span { color: #bd95d9; font-size: .72rem; font-weight: 700; letter-spacing: .12em; }
+.principles-grid span { color: var(--forgeon-purple-soft); font-size: .72rem; font-weight: 700; letter-spacing: .12em; }
 .principles-grid h3 { margin: 2rem 0 .5rem; font-size: clamp(1.35rem, 2vw, 1.8rem); letter-spacing: -.04em; }
 .principles-grid p { max-width: 290px; margin: 0; color: #d4c4de; font-size: .87rem; line-height: 1.65; }
 .characters-section { padding-block: clamp(4rem, 9vw, 8rem); }
@@ -21,7 +21,7 @@
 .character-image { align-self: stretch; overflow: hidden; background: #e8dcef; }
 .character-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .character-copy { padding: 1rem; }
-.character-copy span { color: #8157aa; font-size: .66rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.character-copy span { color: var(--forgeon-purple-dark); font-size: .66rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
 .character-copy h3 { margin: .35rem 0 .45rem; font-size: 1.45rem; letter-spacing: -.04em; }
 .character-copy p { margin: 0; color: #695e73; font-size: .78rem; line-height: 1.55; }
 .about-last { margin-bottom: clamp(3rem, 7vw, 6rem); padding: clamp(2rem, 6vw, 5rem); background: #f1eaf6; }
