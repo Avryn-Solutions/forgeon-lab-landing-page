@@ -9,7 +9,7 @@
       <a routerLink="/orcamento" routerLinkActive="active" (click)="closeMenu()">Personalizados</a>
       <a routerLink="/portfolio" routerLinkActive="active" (click)="closeMenu()">Portfólio</a>
       <a routerLink="/sobre" routerLinkActive="active" (click)="closeMenu()">Sobre</a>
-      <a class="nav-cart" routerLink="/carrinho" routerLinkActive="active" (click)="closeMenu()" [attr.aria-label]="'Carrinho com ' + cart.count() + ' itens'">Carrinho <span class="cart-count">{{ cart.count() }}</span></a>
+      <a class="nav-cart" routerLink="/carrinho" routerLinkActive="active" (click)="closeMenu()" [attr.aria-label]="'Carrinho com ' + cart.count() + (cart.count() === 1 ? ' item' : ' itens')">Carrinho <span class="cart-count">{{ cart.count() }}</span></a>
       <a class="button button-small nav-cta" routerLink="/orcamento" (click)="closeMenu()">Conte sua ideia <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
