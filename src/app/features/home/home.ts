@@ -1,5 +1,5 @@
 import { CurrencyPipe } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MediaCarousel } from '../../shared/media-carousel/media-carousel';
 import { CatalogService } from '../../core/services/catalog.service';
@@ -10,7 +10,10 @@ export class Home {
   readonly featured = this.catalog.getFeaturedProducts();
   readonly pet = this.catalog.getProductBySlug('pet-personalizado');
 
+  readonly motionPaused = signal(false);
+
   replay(element: HTMLElement): void {
+    this.motionPaused.set(false);
     element.getAnimations({ subtree: true }).forEach(animation => {
       animation.cancel();
       animation.play();

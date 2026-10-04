@@ -29,4 +29,4 @@ No código, use var(--forgeon-gradient). Os tons estão definidos em src/styles.
 
 ## Movimento na abertura
 
-A chegada dura menos de cinco segundos e termina com os personagens em repouso. O botão “Rever a chegada” permite repetir a sequência. A preferência de movimento reduzido desativa as animações. No celular, os personagens aparecem logo abaixo do título, antes da apresentação e dos botões de pedido. As ilustrações originais são preservadas.
+O portal se abre e os personagens chegam em sequência: Guaru faz um voo curto, Pingy dá um salto e Disquete pousa com um pequeno balanço. A chegada dura cerca de 3,5 segundos, seguida de gestos suaves e contínuos próprios de cada personagem. O botão “Pausar movimento” interrompe a cena; “Rever a chegada” reinicia a sequência. A preferência de movimento reduzido desativa as animações e esconde esses controles. No celular, os personagens aparecem logo abaixo do título, antes da apresentação e dos botões de pedido. As ilustrações originais são preservadas.

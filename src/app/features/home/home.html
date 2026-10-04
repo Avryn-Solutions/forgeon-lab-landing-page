@@ -1,18 +1,25 @@
 <section class="hero">
   <div class="wrap hero-content">
     <div class="hero-copy">
-      <p class="eyebrow light">GUARU, PINGY E DISQUETE CHEGARAM</p>
+      <p class="eyebrow light">PODE ENTRAR. A IDEIA É SUA.</p>
       <h1>A invasão da<br><em>ForgeonLab.</em></h1>
-      <p>Fotos, desenhos e histórias viram miniaturas, presentes e peças só suas. Criamos com cuidado e entregamos para todo o Brasil.</p>
+      <p>Seu pet, um desenho, uma lembrança entre amigos. Criamos miniaturas e presentes com esses detalhes e entregamos para todo o Brasil.</p>
       <div class="hero-actions"><a class="button button-light" routerLink="/loja">Conhecer as peças <span aria-hidden="true">↗</span></a><a class="text-link" routerLink="/orcamento">Conte sua ideia <span aria-hidden="true">↗</span></a></div>
     </div>
-    <div class="hero-art" #arrival aria-label="Guaru, Pingy e Disquete chegam pelo portal roxo da ForgeonLab" role="img">
+    <div class="hero-art" [class.motion-paused]="motionPaused()" #arrival aria-label="Guaru, Pingy e Disquete chegam pelo portal roxo da ForgeonLab" role="img">
       <div class="hero-portal" aria-hidden="true"></div>
-      <img class="hero-character hero-guaru" src="/characters/guaru.webp" alt="" width="380" height="380" fetchpriority="high" />
-      <img class="hero-character hero-pingy" src="/characters/pingy.webp" alt="" width="300" height="300" fetchpriority="high" />
-      <img class="hero-character hero-disquete" src="/characters/disquete.webp" alt="" width="340" height="340" fetchpriority="high" />
+      <div class="portal-trail" aria-hidden="true"></div>
+      <span class="magic-spark spark-one" aria-hidden="true">✦</span>
+      <span class="magic-spark spark-two" aria-hidden="true">✦</span>
+      <span class="magic-spark spark-three" aria-hidden="true">✦</span>
+      <div class="hero-actor hero-guaru"><img class="hero-character" src="/characters/guaru.webp" alt="" width="380" height="380" fetchpriority="high" /></div>
+      <div class="hero-actor hero-pingy"><img class="hero-character" src="/characters/pingy.webp" alt="" width="300" height="300" fetchpriority="high" /></div>
+      <div class="hero-actor hero-disquete"><img class="hero-character" src="/characters/disquete.webp" alt="" width="340" height="340" fetchpriority="high" /></div>
     </div>
-    <button class="replay-arrival" type="button" (click)="replay(arrival)" aria-label="Rever a chegada de Guaru, Pingy e Disquete"><span aria-hidden="true">↻</span> Rever a chegada</button>
+    <div class="arrival-controls">
+      <button type="button" (click)="replay(arrival)" aria-label="Rever a chegada de Guaru, Pingy e Disquete"><span aria-hidden="true">↻</span> Rever a chegada</button>
+      <button type="button" (click)="motionPaused.set(!motionPaused())" [attr.aria-pressed]="motionPaused()"><span aria-hidden="true">{{ motionPaused() ? '▷' : 'Ⅱ' }}</span> {{ motionPaused() ? 'Retomar movimento' : 'Pausar movimento' }}</button>
+    </div>
   </div>
 </section>
 
