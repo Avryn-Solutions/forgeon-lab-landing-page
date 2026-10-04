@@ -1,16 +1,15 @@
-.hero { min-height: min(700px, calc(100svh - 76px)); overflow: hidden; color: #fff; background: radial-gradient(ellipse at 83% 77%, #36674070, transparent 54%), #14261f; display: flex; align-items: center; }
-.hero-content { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; column-gap: clamp(1rem, 3vw, 3rem); row-gap: .35rem; padding-top: 2rem; padding-bottom: 1.3rem; }
+.hero { min-height: min(700px, calc(100svh - 76px)); position: relative; isolation: isolate; overflow: hidden; color: var(--forgeon-ink); background: linear-gradient(180deg, #8fc9f5 0%, #d8efff 68%, #eff8fb 100%); display: flex; align-items: center; }
+.hero-content { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; column-gap: clamp(1rem, 3vw, 3rem); row-gap: .35rem; padding-top: 2rem; padding-bottom: 1.3rem; }
 .hero-copy { position: relative; z-index: 2; }
 .hero h1 { font-size: clamp(3.9rem, 6.2vw, 6.9rem); line-height: .95; letter-spacing: -.075em; text-transform: uppercase; margin: 1.5rem 0; white-space: nowrap; }
-.hero em { display: block; font-size: .78em; font-style: normal; text-transform: none; letter-spacing: -.07em; background: var(--forgeon-gradient); background-clip: text; -webkit-background-clip: text; color: transparent; }
-.hero p:not(.eyebrow) { max-width: 470px; color: #e8dcec; font-size: 1.08rem; line-height: 1.55; }
+.hero em { display: block; font-size: .78em; font-style: normal; text-transform: none; letter-spacing: -.07em; color: var(--forgeon-purple-dark); }
+.hero p:not(.eyebrow) { max-width: 470px; color: #30394b; font-size: 1.08rem; line-height: 1.55; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem 1.7rem; align-items: center; margin-top: 2rem; }
-.text-link { color: white; border-bottom: 1px solid #ffffff9a; padding-bottom: .3rem; font-weight: 700; }
+.text-link { color: var(--forgeon-purple-dark); border-bottom: 1px solid var(--forgeon-purple-dark); padding-bottom: .3rem; font-weight: 700; }
 .text-link span { margin-left: .8rem; }
 .hero-art { width: 100%; max-width: 480px; justify-self: center; aspect-ratio: 1; position: relative; isolation: isolate; pointer-events: none; perspective: 800px; }
-.hero-meadow { position: absolute; top: 0; left: -30%; width: 160%; height: 100%; object-fit: fill; z-index: -1; }
 .hero-portal { position: absolute; inset: 8% 10% 9%; border-radius: 50%; transform: rotate(-16deg) scaleX(.84); background: var(--forgeon-gradient); box-shadow: 0 0 64px #7b4dff3d, 0 0 0 1px #c5b0ff8c; animation: portal-open 1.15s cubic-bezier(.2,.8,.2,1) both; }
-.hero-portal::before { content: ''; position: absolute; inset: 9%; border: 1px solid #d4c3ff9c; border-radius: 50%; background: radial-gradient(circle at 50% 42%, #6548b6 0%, #382360 45%, #14261f 73%); box-shadow: inset 0 0 42px #a58affaa; }
+.hero-portal::before { content: ''; position: absolute; inset: 9%; border: 1px solid #d4c3ff9c; border-radius: 50%; background: radial-gradient(circle at 50% 42%, #6548b6 0%, #382360 45%, #2b1c49 73%); box-shadow: inset 0 0 42px #a58affaa; }
 .hero-portal::after { content: ''; position: absolute; inset: -6%; border: 1px solid #b48cff66; border-radius: 50%; animation: portal-breathe 5s ease-in-out 3.6s infinite; }
 .hero-actor { position: absolute; transform: rotate(var(--tilt)); }
 .hero-character { display: block; width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 20px 20px #0c092788); }
@@ -26,9 +25,9 @@
 .spark-two { top: 4%; left: 47%; font-size: .7rem; animation-delay: 1.25s; }
 .spark-three { top: 28%; right: 13%; font-size: .8rem; animation-delay: 1.55s; }
 .arrival-controls { grid-column: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: .2rem .8rem; }
-.arrival-controls button { min-height: 44px; padding: .5rem; border: 0; background: none; color: #d8c9f2; font: inherit; font-size: .76rem; cursor: pointer; }
+.arrival-controls button { min-height: 44px; padding: .5rem; border: 0; background: none; color: #44335e; font: inherit; font-size: .76rem; cursor: pointer; }
 .arrival-controls span { display: inline-block; margin-right: .35rem; font-size: 1.1rem; }
-.arrival-controls button:hover { color: white; }
+.arrival-controls button:hover { color: var(--forgeon-purple-dark); }
 .arrival-controls button:focus-visible { outline: 2px solid var(--forgeon-purple-soft); outline-offset: 3px; }
 .motion-paused *, .motion-paused *::after { animation-play-state: paused !important; }
 @keyframes portal-open {
@@ -70,3 +69,18 @@
 }
 @media (max-width: 900px) { .hero h1 { font-size: clamp(3.3rem, 6vw, 5rem); } }
 @media (max-width: 650px) { .hero { min-height: 0; } .hero-content { display: flex; flex-direction: column; gap: 0; padding-top: 2rem; padding-bottom: 2rem; } .hero-copy { display: contents; } .hero-copy .eyebrow { order: 0; align-self: start; } .hero h1 { order: 1; align-self: start; margin: .6rem 0 0; } .hero-copy p:not(.eyebrow) { order: 4; } .hero-actions { order: 5; align-self: start; margin-top: 1rem; } .arrival-controls { order: 3; margin-top: -.5rem; } .hero h1 { font-size: clamp(3.25rem, 13vw, 5rem); } .hero-art { order: 2; width: min(80vw, 340px); margin: .5rem auto 0; } }
+
+.hero .eyebrow { color: var(--forgeon-purple-dark); }
+.hero-landscape { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.hero-grass { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; }
+.hero-sun { position: absolute; top: 7%; right: 7%; width: clamp(64px, 7vw, 100px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff2ad, #ffd469 70%); box-shadow: 0 0 0 15px #fff6cd33, 0 0 65px 20px #fff2ab66; }
+.hero-cloud { position: absolute; height: auto; opacity: .95; }
+.cloud-one { top: 6%; left: 6%; width: clamp(130px, 15vw, 210px); }
+.cloud-two { top: 3%; right: 21%; width: clamp(100px, 12vw, 180px); }
+.cloud-three { top: 39%; right: -2%; width: clamp(130px, 15vw, 230px); opacity: .8; }
+@media (max-width: 650px) {
+  .hero-sun { top: 4%; right: 5%; width: 58px; }
+  .cloud-one { top: 21%; left: -12%; width: 145px; }
+  .cloud-two { top: 2%; right: 27%; width: 100px; opacity: .8; }
+  .cloud-three { top: 45%; right: -12%; width: 150px; }
+}

@@ -1,13 +1,19 @@
 <section class="hero">
+  <div class="hero-landscape" aria-hidden="true">
+    <div class="hero-sun"></div>
+    <img class="hero-cloud cloud-one" src="/scenery/nuvem.svg" alt="" width="240" height="120" />
+    <img class="hero-cloud cloud-two" src="/scenery/nuvem.svg" alt="" width="240" height="120" />
+    <img class="hero-cloud cloud-three" src="/scenery/nuvem.svg" alt="" width="240" height="120" />
+    <img class="hero-grass" src="/scenery/gramado-banner.svg" alt="" />
+  </div>
   <div class="wrap hero-content">
     <div class="hero-copy">
       <p class="eyebrow light">PODE ENTRAR. A IDEIA É SUA.</p>
       <h1>A invasão da<br><em>ForgeonLab.</em></h1>
       <p>Seu pet, um desenho, uma lembrança entre amigos. Criamos miniaturas e presentes com esses detalhes e entregamos para todo o Brasil.</p>
-      <div class="hero-actions"><a class="button button-light" routerLink="/loja">Conhecer as peças <span aria-hidden="true">↗</span></a><a class="text-link" routerLink="/orcamento">Conte sua ideia <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-actions"><a class="button" routerLink="/loja">Conhecer as peças <span aria-hidden="true">↗</span></a><a class="text-link" routerLink="/orcamento">Conte sua ideia <span aria-hidden="true">↗</span></a></div>
     </div>
-    <div class="hero-art" [class.motion-paused]="motionPaused()" #arrival aria-label="Guaru, Pingy e Disquete chegam pelo portal roxo da ForgeonLab sobre um gramado verde" role="img">
-      <img class="hero-meadow" src="/scenery/gramado.svg" alt="" width="800" height="800" />
+    <div class="hero-art" [class.motion-paused]="motionPaused()" #arrival aria-label="Guaru, Pingy e Disquete chegam pelo portal roxo da ForgeonLab em um cenário com céu azul, sol, nuvens e gramado verde" role="img">
       <div class="hero-portal" aria-hidden="true"></div>
       <div class="portal-trail" aria-hidden="true"></div>
       <span class="magic-spark spark-one" aria-hidden="true">✦</span>

@@ -33,4 +33,4 @@ O portal se abre e os personagens chegam em sequência: Guaru faz um voo curto, 
 
 ## Cenário da abertura
 
-O gramado verde é um cenário para Guaru, Pingy e Disquete, com relevo e pequenos tufos de grama desenhados em SVG (public/scenery/gramado.svg). O fundo verde escuro preserva a leitura do texto branco; o portal e o nome da marca continuam usando o gradiente roxo oficial. Os verdes do cenário são cores de ilustração, não substituem a paleta da ForgeonLab.
+O banner tem céu azul em degradê, sol dourado e nuvens arredondadas, com gramado de ponta a ponta. O gramado e as nuvens são SVGs leves em public/scenery. O céu usa cores claras, por isso título, parágrafo e controles têm texto escuro, e o botão principal é roxo. O portal continua usando o gradiente roxo oficial. As cores da paisagem pertencem à ilustração e não substituem a paleta da ForgeonLab.
