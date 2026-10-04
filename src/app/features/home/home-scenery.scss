@@ -1,0 +1,28 @@
+.hero .eyebrow { color: var(--forgeon-purple-dark); }
+.hero-landscape { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.hero-grass { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: fill; }
+.hero-sun { position: absolute; top: 7%; right: 7%; width: clamp(64px, 7vw, 100px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff2ad, #ffd469 70%); box-shadow: 0 0 0 15px #fff6cd33, 0 0 65px 20px #fff2ab66; animation: sun-float 9s ease-in-out infinite; }
+.hero-cloud { position: absolute; left: -240px; height: auto; opacity: .95; animation: cloud-cross var(--duration) linear var(--delay) infinite; }
+.cloud-one { top: 6%; --duration: 60s; --delay: -13s; width: clamp(130px, 15vw, 210px); }
+.cloud-two { top: 3%; --duration: 80s; --delay: -50s; width: clamp(100px, 12vw, 180px); }
+.cloud-three { top: 39%; --duration: 95s; --delay: -81s; width: clamp(130px, 15vw, 230px); opacity: .8; }
+@media (max-width: 650px) {
+  .hero-sun { top: 4%; right: 5%; width: 58px; }
+  .cloud-one { top: 21%; --delay: -13s; width: 145px; }
+  .cloud-two { top: 2%; --delay: -40s; width: 100px; opacity: .8; }
+  .cloud-three { top: 45%; --delay: -65s; width: 150px; }
+}
+
+.hero-sun::before { content: ''; position: absolute; inset: -22%; border-radius: 50%; background: repeating-conic-gradient(#ffd269 0deg 5deg, transparent 5deg 30deg); mask: radial-gradient(circle, transparent 64%, #000 66%); opacity: .75; animation: sun-rays 36s linear infinite; }
+.hero-sun::after { content: ''; position: absolute; inset: -32%; border-radius: 50%; background: radial-gradient(circle, #fff2b566, transparent 70%); z-index: -1; animation: sun-glow 5s ease-in-out infinite; }
+.portal-particles { position: absolute; inset: 7% 10% 9%; transform: rotate(-16deg) scaleX(.84); z-index: 4; pointer-events: none; }
+.particle-ring { position: absolute; inset: 0; animation: portal-orbit 28s linear infinite; }
+.particle-position { position: absolute; inset: 0; transform: rotate(var(--angle)); }
+.portal-particle { position: absolute; top: 0; left: 50%; width: var(--size); height: var(--size); border-radius: 50%; background: #faf3ff; box-shadow: 0 0 7px 2px #b48cffaa; animation: particle-glow 3.8s ease-in-out var(--delay) infinite; }
+.particle-position:nth-child(3n) .portal-particle { background: #ffe9aa; }
+@keyframes cloud-cross { from { transform: translateX(0); } to { transform: translateX(calc(100vw + 480px)); } }
+@keyframes sun-float { 0%, 100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-8px) rotate(3deg); } }
+@keyframes sun-rays { to { transform: rotate(360deg); } }
+@keyframes sun-glow { 0%, 100% { opacity: .45; transform: scale(.95); } 50% { opacity: .8; transform: scale(1.08); } }
+@keyframes portal-orbit { to { transform: rotate(360deg); } }
+@keyframes particle-glow { 0%, 100% { opacity: .25; transform: scale(.6); } 50% { opacity: .95; transform: scale(1.15); } }

@@ -9,7 +9,7 @@ describe('Character introduction', () => {
     const fixture = TestBed.createComponent(Home);
     fixture.detectChanges();
     const element: HTMLElement = fixture.nativeElement;
-    const art = element.querySelector('.hero-art') as HTMLElement;
+    const art = element.querySelector('.hero') as HTMLElement;
     const animation = { cancel: vi.fn(), play: vi.fn() };
     Object.defineProperty(art, 'getAnimations', { value: vi.fn(() => [animation]) });
     const controls = element.querySelectorAll<HTMLButtonElement>('.arrival-controls button');
